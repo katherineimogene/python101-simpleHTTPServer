@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="text/stylesheet" href="matchlight.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="matchlight.js"></script>
+    <title>Matchlight Dashboard</title>
+  </head>
+  <body>
+    <main>
+      <section class='fingerprints'>
+        <div id="fingerprint_count" class="underline"></div>
+        <div class="label">Fingerprints in Matchlight Database</div>
+      </section>
+      <section class='artifacts'>
+        <div class="label underline">Latest artifacts added</div>
+        <table id="artifacts">
+          <tr class="row"><td class="cwid"></td><td class="fdomain"></td></tr>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
