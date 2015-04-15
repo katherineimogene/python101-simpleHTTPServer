@@ -26,7 +26,8 @@ DataController.prototype = {
 
   handleFingerprints: function(){
     $.getJSON( this.countData, function( data ) {
-      controller.drawer.drawFingerprints(data.result)
+      formattedNumber = controller.formatNumber(data.result)
+      controller.drawer.drawFingerprints(formattedNumber)
     })
   },
 
@@ -35,6 +36,10 @@ DataController.prototype = {
       truncatedData = controller.truncateCwids(data.result)
       controller.drawer.drawLatestHits(truncatedData)
     })
+  },
+
+  formatNumber: function(number){
+    return number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
   },
 
   truncateCwids: function(data){
@@ -58,7 +63,7 @@ Drawer.prototype = {
   drawLatestHits: function(data) {
     $.each(data, function(i, hit){
       if (i == 0) {
-        var firstRow = $('#artifacts').find('.row')
+        var firstRow = $('.row')
         firstRow.find('.cwid').html(hit.cwid)
         firstRow.find('.fdomain').html(hit.fdomain)
       } else {;
@@ -66,7 +71,7 @@ Drawer.prototype = {
         var newRow = $(row).clone()
         newRow.find('.cwid').html(hit.cwid)
         newRow.find('.fdomain').html(hit.fdomain)
-        $('#artifacts tr:last').after(newRow);
+        $('.artifacts').append(newRow);
       }
     })
   }

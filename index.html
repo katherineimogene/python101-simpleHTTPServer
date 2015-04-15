@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="text/stylesheet" href="matchlight.css">
+    <link rel="stylesheet" href="matchlight.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="matchlight.js"></script>
     <title>Matchlight Dashboard</title>
@@ -14,9 +16,10 @@
       </section>
       <section class='artifacts'>
         <div class="label underline">Latest artifacts added</div>
-        <table id="artifacts">
-          <tr class="row"><td class="cwid"></td><td class="fdomain"></td></tr>
-        </table>
+        <div class='row'>
+          <div class='cwid'></div>
+          <div class='fdomain'></div>
+        </div>
       </section>
     </main>
   </body>

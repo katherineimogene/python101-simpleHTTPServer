@@ -1,0 +1,45 @@
+main {
+  font-family: 'Open Sans', sans-serif;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 2.5em;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#fingerprint_count {
+  font-size: 43px;
+}
+
+.artifacts {
+  margin-top: 2.5em;
+  margin-bottom: 5em;
+}
+
+.row {
+  border-bottom: 1px solid #ccc;
+  padding: .5em 0 .2em;
+}
+
+.fdomain {
+  text-align: right;
+}
+
+.cwid {
+  display: inline;
+  font-family: 'Source Code Pro', Arial, serif ;
+  float: left;
+}
+
+.underline {
+  border-bottom: 6px solid #f76547;
+}
+
+.label {
+  text-transform: uppercase;
+}
+
+.fingerprints .label {
+  padding-top: .35em;
+}
