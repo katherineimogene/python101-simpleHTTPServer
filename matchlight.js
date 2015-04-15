@@ -1,13 +1,8 @@
 window.onload = function(){
   var countData = "count_fp.json"
   var latestHitsData = "latest_hits.json"
-  var domElements = { fingerprint: "#fingerprint_count",
-                      table: "#artifacts",
-                      row: ".row",
-                      td_left: ".cwid",
-                      td_right: ".fdomain" }
   dataController = new DataController(countData, latestHitsData)
-  drawer = new Drawer(domElements)
+  drawer = new Drawer()
   dataController.registerDrawer(drawer)
   dataController.handleFingerprints()
   dataController.handleLatestHits()
@@ -52,12 +47,11 @@ DataController.prototype = {
 }
 
 Drawer = function(domElements){
-  this.domElements = domElements
 }
 
 Drawer.prototype = {
   drawFingerprints: function(data) {
-    $(this.domElements.fingerprint).html(data)
+    $('#fingerprint_count').html(data)
   },
 
   drawLatestHits: function(data) {
